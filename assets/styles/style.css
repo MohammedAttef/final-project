@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* global style , for the styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  text-transform: capitalize;
+}
+
+/* login Form component */
+.form-container {
+  border-radius: 10px;
+  width: 1000px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+
+  .welcome-section {
+    flex: 1;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(to bottom right, rgb(255, 153, 139), rgb(255, 106, 137));
+
+    .welcome-img {
+      max-width: 300px;
+      max-height: 300px;
+
+    }
+
+    .welcome-title {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .welcome-description {
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .login-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgb(246, 250, 253);
+
+    li {
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+      transition: .4s ease;
+      padding: 5px 0;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 5px;
+        background-color: rgb(255, 106, 137);
+        transition: .4s ease;
+      }
+
+      &:hover {
+        color: rgb(255, 106, 137);
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .form-input {
+      width: 400px;
+      height: 40px;
+      padding: .5rem 1rem;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #000;
+      font-size: 1rem;
+      transition: .4s ease;
+
+      &:focus {
+        background-color: #eee;
+      }
+    }
+
+    .login-status {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .form-btn {
+      width: 400px;
+      padding: .75rem 0;
+      border-radius: 5px;
+      border: none;
+      background-color: #ee6b4d;
+      color: #fff;
+      cursor: pointer;
+      transition: .4s ease;
+
+      &:hover {
+        background-color: #d6583c;
+      }
+    }
+
+  }
+
+  @media (max-width:480px) {
+
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+
+    .welcome-img {
+      width: 250px;
+      height: auto;
+    }
+
+    .welcome-section {
+      flex: 1;
+    }
+
+    .login-form {
+      flex: 2;
+
+      .login-status {
+        padding: 1rem;
+      }
+
+      .form-input {
+        width: 250px;
+      }
+    }
+  }
+}
