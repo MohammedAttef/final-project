@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="section-container">
+    <aside class="products-filter__container">
+      <p class="container-title">categories</p>
+      <!-- each label for each category , for dynamic put just one label inside the for loop and bind the data -->
+      <label class="products-filter__category">
+        <input type="checkbox" name="subscribe" />
+        electronics
+      </label>
+      <!-- <label class="products-filter__category">
+        <input type="checkbox" name="subscribe" />
+        sports
+      </label>
+      <label class="products-filter__category">
+        <input type="checkbox" name="subscribe" />
+        furniture
+      </label>
+      <label class="products-filter__category">
+        <input type="checkbox" name="subscribe" />
+        clothing
+      </label>
+      <label class="products-filter__category">
+        <input type="checkbox" name="subscribe" />
+        books
+      </label> -->
+      <div class="price-filter">
+        <label class="price-filter-title" for="price">Price Range :</label>
+        <span>0</span> <!-- Change it as u like -->
+        <input type="range" id="price" min="" max="" value="">
+        <span>100</span> <!-- Change it as u like-->
+
+      </div>
+    </aside>
+    <div class="product-section__container">
+      <p class="container-title">
+        all products
+        <!-- changed when the category change  -->
+      </p>
+      <div class="products-container">
+
+        <article class="product-card">
+          <div class="product-card__overlay">
+            <button class="details-button">
+              go to details
+            </button>
+          </div>
+          <img src="../assets/imgs/unnamed.png" alt="" class="product-img">
+          <div class="product-details">
+            <p class="product-title">shirt</p>
+            <p class="product-price">20$</p>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
